@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [display, setDisplay] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container has-background-light p-5">
+        <h1 className="title">Drum Machine</h1>
+        <div className="columns my-5">
+          <div
+            className="column is-8 is-offset-2 box has-background-dark has-text-light is-family-code mx-3"
+            id="display"
+          >
+            Display
+          </div>
+        </div>
+        <div className="container">
+          <div className="columns is-mobile">
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">Q</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">W</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">E</div>
+            </div>
+          </div>
+          <div className="columns is-mobile">
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">A</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">S</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">D</div>
+            </div>
+          </div>
+          <div className="columns is-mobile">
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">Z</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">X</div>
+            </div>
+            <div className="column is-4">
+              <div className="box has-background-dark has-text-light is-family-code">C</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
